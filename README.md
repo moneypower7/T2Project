@@ -1,2 +1,2 @@
 # T2Project
-Troy,Nick,Ian,Trevor
+Troy,Nick
