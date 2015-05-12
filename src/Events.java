@@ -22,4 +22,8 @@ public class Events { //Everyone in the group can add their own events, they can
 		}
 		return position;
 	}
+	public int ev2(int p){
+		int position = p;
+		return position;
+	}
 }
