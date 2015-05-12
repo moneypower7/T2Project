@@ -17,7 +17,7 @@ public class Events { //Everyone in the group can add their own events, they can
 			System.out.println("Korean Jesus welcomes you and grants you his blessing, feeling loved you walk 8 miles");
 			position += 8;
 		case 2:
-			System.out.println("Korean Jesus is disappointed in you, you walk 1 mile");
+			System.out.println("Korean Jesus is dissapointed in you, you walk 1 mile");
 			position+=1;
 		}
 		return position;
