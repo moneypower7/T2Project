@@ -9,17 +9,21 @@ import java.awt.*;
 
 public class Events {
 	int speed;
+	int position;
+	int choice;
 	ArrayList<String> items;
 
 	public Events() {
 		speed = 2;
+		position = 0;
+		choice = 0;
 		items = new ArrayList<String>();
 	}
 
 	Scanner u = new Scanner(System.in);
 
 	public int ev0(int p) {// No event, you proceed normally @Troy
-		int position = p;
+		position = p;
 		System.out
 				.println("Hmmm, that's weird... you encountered nothing on your travel, you walked forward 4 miles feeling a little bored");
 		position += speed;
@@ -27,8 +31,7 @@ public class Events {
 	}
 
 	public int ev1(int p) { // Strange Temple (Korean Jesus) @Troy
-		int position = p;
-		int choice;
+		position = p;
 		System.out
 				.println("You come across a strange temple, would you like to enter? (1) Yes (2) No");
 		choice = u.nextInt();
@@ -54,7 +57,7 @@ public class Events {
 	}
 
 	public int ev2(int p) { // Deep Woods (Shulk) @Nick
-		int position = p;
+		position = p;
 		System.out
 				.println("Deep in the woods you stumble upon an old man who asks, "
 						+ "\"Would you like to learn the way of the Monado?\"");
