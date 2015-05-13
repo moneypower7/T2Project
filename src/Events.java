@@ -66,6 +66,7 @@ public class Events {
 		case 1:
 			System.out
 					.println("You acquired the Monado! Use it to escape any dangerous situation.");
+			items.add("Monado");
 			position++;
 			break;
 		case 2:
