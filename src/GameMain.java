@@ -1,4 +1,3 @@
-
 public class GameMain {
 
 	public static void main(String[] args) { //Main Idea is that the player is on a road and comes across different events as they progress, similar to board game online
@@ -6,6 +5,8 @@ public class GameMain {
 		int position,event;
 		position = 0;
 		while (position<100){
+			System.out.println("Never gonna give you up");
+			System.out.println("Never gonna let you down");
 			//event = random.nextInt(number of events);
 			//switch event
 			/*/case (any):

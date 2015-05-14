@@ -1,6 +1,7 @@
 import java.util.Scanner;
 import java.util.*;
 import java.awt.*;
+import java.Enum.*
 
 /* important shit to do:
  - Include checker so each event only happens once
@@ -12,7 +13,7 @@ public class Events {
 	int position;
 	int choice;
 	ArrayList<String> items;
-
+	TimeUnit.SECONDS.sleep(1);
 	public Events() {
 		speed = 2;
 		position = 0;
@@ -33,7 +34,9 @@ public class Events {
 	public int ev1(int p) { // Strange Temple (Korean Jesus) @Troy
 		position = p;
 		System.out
-				.println("You come across a strange temple, would you like to enter? (1) Yes (2) No");
+				.println("You come across a strange temple.");
+		System.out.println("(1) Enter");
+		System.out.println("(2) Move on");
 		choice = u.nextInt();
 		switch (choice) {
 		case 1:
@@ -85,15 +88,37 @@ public class Events {
 		}
 		return position;
 	}
-	public int evcreation(int p) { // Strange Temple (Korean Jesus) @Troy
+
+	public int ev3(int p) { //
 		position = p;
-		System.out
-				.println("");
+		System.out.println("");
 		choice = u.nextInt();
 		switch (choice) {
 		case 1:
+			System.out.println("");
 			break;
 		case 2:
+			System.out.println("");
+			break;
+		default:
+			System.out
+					.println("No pity is shown to those who cannot follow the rules of the game. Die, you fiend.");
+			position = 0;
+			break;
+		}
+		return position;
+	}
+
+	public int evcreation(int p) { // Strange Temple (Korean Jesus) @Troy
+		position = p;
+		System.out.println("");
+		choice = u.nextInt();
+		switch (choice) {
+		case 1:
+			System.out.println("");
+			break;
+		case 2:
+			System.out.println("");
 			break;
 		default:
 			System.out
