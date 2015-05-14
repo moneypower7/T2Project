@@ -7,13 +7,15 @@ import java.Enum.*
  - Include checker so each event only happens once
  - fully implement items
  */
-
+/* Ideas
+ * Option to use the force
+ * 
+ */
 public class Events {
 	int speed;
 	int position;
 	int choice;
 	ArrayList<String> items;
-	TimeUnit.SECONDS.sleep(1);
 	public Events() {
 		speed = 2;
 		position = 0;
@@ -89,16 +91,21 @@ public class Events {
 		return position;
 	}
 
-	public int ev3(int p) { //
+	public int ev3(int p) { //White Rabbit @Troy&Nick
 		position = p;
-		System.out.println("");
+		System.out.println("There is white rabbit in the road, it looks rather fluffy and cute");
+		System.out.println("(1) Reach out and pet it ");
+		System.out.println("(2) Ignore it and move on ");
 		choice = u.nextInt();
 		switch (choice) {
 		case 1:
-			System.out.println("");
+			System.out.println(" IT IS THE RABBIT!!!");
+			System.out.println("You died horribly, it was gruesome");
+			position = -1;
 			break;
 		case 2:
-			System.out.println("");
+			System.out.println("Probably a good idea, it's better to avoid cutness");
+			position += speed;
 			break;
 		default:
 			System.out
@@ -109,16 +116,55 @@ public class Events {
 		return position;
 	}
 
+	public int ev4(int p) { //Stolen Shoe @Troy
+		position = p;
+		System.out.println("You encountered a squirell, it tricked you and stole your shoe, your speed has been deminished");
+		choice = u.nextInt();
+		speed -= 1;
+		position += speed;
+		return position;
+	}
+	
+	public int ev5(int p) { // LOLRUS (Korean Jesus) @Troy
+		position = p;
+		System.out.println("You encountered the LOLRUS, he seems quite content with the bucket he has in his flippers");
+		System.out.println("(1) Steal his bucket");
+		System.out.println("(2) Leave him be");
+		choice = u.nextInt();
+		switch (choice) {
+		case 1:
+			System.out.println("You stole his bucket, he seems quite sad... As you carefully place the bucket in your backpack you begin to worry that you have upset Korean Jesus");
+			items.add("Bucket");
+			position += speed;
+			break;
+		case 2:
+			System.out.println("You are a wonderful human being, Korean Jesus smiles upon you, your speed has increased");
+			speed += 2;
+			position += speed;
+			break;
+		default:
+			System.out
+					.println("No pity is shown to those who cannot follow the rules of the game. Die, you fiend.");
+			position = 0;
+			break;
+		}
+		return position;
+	}
+	
 	public int evcreation(int p) { // Strange Temple (Korean Jesus) @Troy
 		position = p;
 		System.out.println("");
+		System.out.println("(1) ");
+		System.out.println("(2) ");
 		choice = u.nextInt();
 		switch (choice) {
 		case 1:
 			System.out.println("");
+			position += speed;
 			break;
 		case 2:
 			System.out.println("");
+			position += speed;
 			break;
 		default:
 			System.out
