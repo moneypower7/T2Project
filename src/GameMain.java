@@ -1,10 +1,14 @@
+import java.io.IOException;
+import java.net.URISyntaxException;
+
 public class GameMain {
 
-	public static void main(String[] args) { //Main Idea is that the player is on a road and comes across different events as they progress, similar to board game online
+	public static void main(String[] args) throws IOException, URISyntaxException{ //Main Idea is that the player is on a road and comes across different events as they progress, similar to board game online
 		// TODO Auto-generated method stub
 		int position,event;
-		position = 0;
-		while (position<100){
+		position = -1;
+		Events e = new Events();
+		while (position<100 && position>=0){
 			System.out.println("Never gonna give you up");
 			System.out.println("Never gonna let you down");
 			//event = random.nextInt(number of events);

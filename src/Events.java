@@ -1,7 +1,10 @@
-import java.util.Scanner;
 import java.util.*;
 import java.awt.*;
-import java.Enum.*
+import java.util.concurrent.*;
+import java.awt.Desktop;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 
 /* important shit to do:
  - Include checker so each event only happens once
@@ -16,6 +19,7 @@ public class Events {
 	int position;
 	int choice;
 	ArrayList<String> items;
+
 	public Events() {
 		speed = 2;
 		position = 0;
@@ -35,8 +39,7 @@ public class Events {
 
 	public int ev1(int p) { // Strange Temple (Korean Jesus) @Troy
 		position = p;
-		System.out
-				.println("You come across a strange temple.");
+		System.out.println("You come across a strange temple.");
 		System.out.println("(1) Enter");
 		System.out.println("(2) Move on");
 		choice = u.nextInt();
@@ -91,9 +94,10 @@ public class Events {
 		return position;
 	}
 
-	public int ev3(int p) { //White Rabbit @Troy&Nick
+	public int ev3(int p) { // White Rabbit @Troy&Nick
 		position = p;
-		System.out.println("There is white rabbit in the road, it looks rather fluffy and cute");
+		System.out
+				.println("There is white rabbit in the road, it looks rather fluffy and cute");
 		System.out.println("(1) Reach out and pet it ");
 		System.out.println("(2) Ignore it and move on ");
 		choice = u.nextInt();
@@ -104,7 +108,8 @@ public class Events {
 			position = -1;
 			break;
 		case 2:
-			System.out.println("Probably a good idea, it's better to avoid cutness");
+			System.out
+					.println("Probably a good idea, it's better to avoid cutness");
 			position += speed;
 			break;
 		default:
@@ -116,29 +121,33 @@ public class Events {
 		return position;
 	}
 
-	public int ev4(int p) { //Stolen Shoe @Troy
+	public int ev4(int p) { // Stolen Shoe @Troy
 		position = p;
-		System.out.println("You encountered a squirell, it tricked you and stole your shoe, your speed has been deminished");
+		System.out
+				.println("You encountered a squirell, it tricked you and stole your shoe, your speed has been deminished");
 		choice = u.nextInt();
 		speed -= 1;
 		position += speed;
 		return position;
 	}
-	
+
 	public int ev5(int p) { // LOLRUS (Korean Jesus) @Troy
 		position = p;
-		System.out.println("You encountered the LOLRUS, he seems quite content with the bucket he has in his flippers");
+		System.out
+				.println("You encountered the LOLRUS, he seems quite content with the bucket he has in his flippers");
 		System.out.println("(1) Steal his bucket");
 		System.out.println("(2) Leave him be");
 		choice = u.nextInt();
 		switch (choice) {
 		case 1:
-			System.out.println("You stole his bucket, he seems quite sad... As you carefully place the bucket in your backpack you begin to worry that you have upset Korean Jesus");
+			System.out
+					.println("You stole his bucket, he seems quite sad... As you carefully place the bucket in your backpack you begin to worry that you have upset Korean Jesus");
 			items.add("Bucket");
 			position += speed;
 			break;
 		case 2:
-			System.out.println("You are a wonderful human being, Korean Jesus smiles upon you, your speed has increased");
+			System.out
+					.println("You are a wonderful human being, Korean Jesus smiles upon you, your speed has increased");
 			speed += 2;
 			position += speed;
 			break;
@@ -150,7 +159,46 @@ public class Events {
 		}
 		return position;
 	}
-	
+
+	public int ev6(int p) throws IOException, URISyntaxException, InterruptedException { // Do you
+																	// want to
+																	// be god?
+																	// (Korean
+																	// Jesus)
+																	// @Troy
+		position = p;
+		System.out
+				.println("A strange korean man wearing a robe and flipflops approaches you, for some reason he looks strangely familiar");
+		System.out.println("\"Would you like to be a god young man?\"");
+		System.out.println("(1)\"Yes please\" ");
+		System.out
+				.println("(2) \"No thank you sir, I am perfectly happy being a human\" ");
+		choice = u.nextInt();
+		switch (choice) {
+		case 1:
+			if (Desktop.isDesktopSupported()) {
+				Desktop.getDesktop().browse(
+						new URI("https://www.youtube.com/watch?v=dQw4w9WgXcQ"));
+			}
+			TimeUnit.SECONDS.sleep(30);
+			System.out.println("\"Silly mortal, you shall be spaired this time, this time....\"");
+			position += speed;
+			break;
+		case 2:
+			System.out
+					.println("Korean Jesus is proud of you, your speed increases and he moves you forward 3 miles");
+			speed += 2;
+			position += speed + 3;
+			break;
+		default:
+			System.out
+					.println("No pity is shown to those who cannot follow the rules of the game. Die, you fiend.");
+			position = 0;
+			break;
+		}
+		return position;
+	}
+
 	public int evcreation(int p) { // Strange Temple (Korean Jesus) @Troy
 		position = p;
 		System.out.println("");
