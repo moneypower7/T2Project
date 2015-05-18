@@ -32,7 +32,7 @@ public class Events {
 	public int ev0(int p) {// No event, you proceed normally @Troy
 		position = p;
 		System.out
-				.println("Hmmm, that's weird... you encountered nothing on your travel, you walked forward 4 miles feeling a little bored");
+				.println("Hmmm, that's weird... you encountered nothing on your travel, you walked forward " + speed + " miles feeling a little bored");
 		position += speed;
 		return position;
 	}
@@ -180,7 +180,7 @@ public class Events {
 				Desktop.getDesktop().browse(
 						new URI("https://www.youtube.com/watch?v=dQw4w9WgXcQ"));
 			}
-			TimeUnit.SECONDS.sleep(30);
+			TimeUnit.SECONDS.sleep(10);
 			System.out.println("\"Silly mortal, you shall be spaired this time, this time....\"");
 			position += speed;
 			break;
