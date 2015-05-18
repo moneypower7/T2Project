@@ -193,12 +193,117 @@ public class Events {
 		default:
 			System.out
 					.println("No pity is shown to those who cannot follow the rules of the game. Die, you fiend.");
-			position = 0;
+			position = -1;
 			break;
 		}
 		return position;
 	}
 
+	public int ev7(int p) { // Sketchy Temple @Troy&Nick
+		position = p;
+		int choice2;
+		System.out.println("You pass by a sketchy Temple, it looks very old");
+		System.out.println("(1) Enter");
+		System.out.println("(2) Move on");
+		choice = u.nextInt();
+		switch (choice) {
+		case 1:
+			System.out.println("Once inside the temple you come to a fork in the hallway");
+			System.out.println("(1) Right");
+			System.out.println("(2) Left");
+			choice2 = u.nextInt();
+			switch (choice2){
+			case 1:
+				System.out.println("A boulder fell on you Indiana Jones style, it was gruesome.. You are now dead");
+				position = -1;
+				break;
+			case 2:
+				System.out.println("You made it safely out of the temple and found a mysterious crystal");
+				items.add("Mysterious Crystal");
+			}
+			position += speed;
+			break;
+		case 2:
+			System.out.println("You move on without any troubles");
+			position += speed;
+			break;
+		default:
+			System.out
+					.println("No pity is shown to those who cannot follow the rules of the game. Die, you fiend.");
+			position = -1;
+			break;
+		}
+		return position;
+	}
+	
+	public int ev8(int p) { // Rabbit Hole (Korean Jesus) @Troy&Nick 
+		position = p;
+		String choice2;
+		int choice3;
+		System.out.println("You stepped in the wrong hole and a rabbit stole your shoe");
+		System.out.println("(1) Reach your hand in ");
+		System.out.println("(2) Accept your fate and give the rabbit the full pair");
+		System.out.println("(3) Inventory");
+		choice = u.nextInt();
+		switch (choice) {
+		case 1:
+			System.out.println("The rabbit takes your hand off");
+			System.out.println("(1) Reach your other hand in ");
+			System.out.println("(2) Accept your fate move on");
+			choice3 = u.nextInt();
+			switch (choice3){
+			case 1:
+				System.out.println("You are literally too stupid to live, god has smitten you... You are now dead");
+				position = -1;
+				break;
+			case 2:
+				System.out.println("Korean Jesus is proud of you, you move on, a bit slower than before");
+				speed -=1;
+				break;
+			}
+			position += speed;
+			break;
+		case 2:
+			System.out.println("You move on, it is a bit slower and muddier now without your shoe");
+			speed -= 1;
+			position += speed;
+			break;
+		case 3:
+			System.out.println("You check your backpack and find: " + items);
+			System.out.println("Enter the item you would like to use");
+			choice2 = u.next();
+			if (items.toString().toLowerCase().contains(choice2.toLowerCase())){
+				switch (choice2.toLowerCase()){
+				case "monado": 
+					System.out.println("A bit overkill, but you know... ya killed it, feeling a little proud of yourself for retrieving your shoe, you move on at an increased pace");
+					speed+=3;
+					position+=speed;
+					items.remove(items.indexOf("Monado"));
+					break;
+				case "mysterious crystal":
+					System.out.println("Turns out its a fire crystal, you smile as the rabbit sizzles, too bad the fire consumed your shoe as well");
+					speed +=1;
+					position += speed;
+					break;
+				default:
+					System.out.println("Really you used your " + choice2 + " to try to kill a rabbit?? Well, it did nothing");
+					speed -=1;
+					position += speed;
+				}
+			}else{
+				System.out.println("You do not even own this item, you can no longer use items on this event... and it keeps your shoe");
+				speed -= 1;
+				position += speed;
+			}
+		default:
+			System.out
+					.println("No pity is shown to those who cannot follow the rules of the game. Die, you fiend.");
+			position = -1;
+			break;
+		}
+		return position;
+	}
+	
 	public int evcreation(int p) { // Strange Temple (Korean Jesus) @Troy
 		position = p;
 		System.out.println("");
