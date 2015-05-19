@@ -33,7 +33,8 @@ public class Events {
 	public int ev0(int p) {// No event, you proceed normally @Troy
 		position = p;
 		System.out
-				.println("Hmmm, that's weird... you encountered nothing on your travel, you walked forward " + speed + " miles feeling a little bored");
+				.println("Hmmm, that's weird... you encountered nothing on your travel, you walked forward "
+						+ speed + " miles feeling a little bored");
 		position += speed;
 		return position;
 	}
