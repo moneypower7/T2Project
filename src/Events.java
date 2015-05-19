@@ -16,6 +16,7 @@ import java.net.URISyntaxException;
  */
 public class Events {
 	int speed;
+	String item;
 	int position;
 	int choice;
 	ArrayList<String> items;
@@ -160,12 +161,13 @@ public class Events {
 		return position;
 	}
 
-	public int ev6(int p) throws IOException, URISyntaxException, InterruptedException { // Do you
-																	// want to
-																	// be god?
-																	// (Korean
-																	// Jesus)
-																	// @Troy
+	public int ev6(int p) throws IOException, URISyntaxException,
+			InterruptedException { // Do you
+		// want to
+		// be god?
+		// (Korean
+		// Jesus)
+		// @Troy
 		position = p;
 		System.out
 				.println("A strange korean man wearing a robe and flipflops approaches you, for some reason he looks strangely familiar");
@@ -181,7 +183,8 @@ public class Events {
 						new URI("https://www.youtube.com/watch?v=dQw4w9WgXcQ"));
 			}
 			TimeUnit.SECONDS.sleep(10);
-			System.out.println("\"Silly mortal, you shall be spaired this time, this time....\"");
+			System.out
+					.println("\"Silly mortal, you shall be spaired this time, this time....\"");
 			position += speed;
 			break;
 		case 2:
@@ -208,17 +211,20 @@ public class Events {
 		choice = u.nextInt();
 		switch (choice) {
 		case 1:
-			System.out.println("Once inside the temple you come to a fork in the hallway");
+			System.out
+					.println("Once inside the temple you come to a fork in the hallway");
 			System.out.println("(1) Right");
 			System.out.println("(2) Left");
 			choice2 = u.nextInt();
-			switch (choice2){
+			switch (choice2) {
 			case 1:
-				System.out.println("A boulder fell on you Indiana Jones style, it was gruesome.. You are now dead");
+				System.out
+						.println("A boulder fell on you Indiana Jones style, it was gruesome.. You are now dead");
 				position = -1;
 				break;
 			case 2:
-				System.out.println("You made it safely out of the temple and found a mysterious crystal");
+				System.out
+						.println("You made it safely out of the temple and found a mysterious crystal");
 				items.add("Mysterious Crystal");
 			}
 			position += speed;
@@ -235,14 +241,16 @@ public class Events {
 		}
 		return position;
 	}
-	
-	public int ev8(int p) { // Rabbit Hole (Korean Jesus) @Troy&Nick 
+
+	public int ev8(int p) { // Rabbit Hole (Korean Jesus) @Troy&Nick
 		position = p;
 		String choice2;
 		int choice3;
-		System.out.println("You stepped in the wrong hole and a rabbit stole your shoe");
+		System.out
+				.println("You stepped in the wrong hole and a rabbit stole your shoe");
 		System.out.println("(1) Reach your hand in ");
-		System.out.println("(2) Accept your fate and give the rabbit the full pair");
+		System.out
+				.println("(2) Accept your fate and give the rabbit the full pair");
 		System.out.println("(3) Inventory");
 		choice = u.nextInt();
 		switch (choice) {
@@ -251,20 +259,23 @@ public class Events {
 			System.out.println("(1) Reach your other hand in ");
 			System.out.println("(2) Accept your fate move on");
 			choice3 = u.nextInt();
-			switch (choice3){
+			switch (choice3) {
 			case 1:
-				System.out.println("You are literally too stupid to live, god has smitten you... You are now dead");
+				System.out
+						.println("You are literally too stupid to live, god has smitten you... You are now dead");
 				position = -1;
 				break;
 			case 2:
-				System.out.println("Korean Jesus is proud of you, you move on, a bit slower than before");
-				speed -=1;
+				System.out
+						.println("Korean Jesus is proud of you, you move on, a bit slower than before");
+				speed -= 1;
 				break;
 			}
 			position += speed;
 			break;
 		case 2:
-			System.out.println("You move on, it is a bit slower and muddier now without your shoe");
+			System.out
+					.println("You move on, it is a bit slower and muddier now without your shoe");
 			speed -= 1;
 			position += speed;
 			break;
@@ -272,26 +283,33 @@ public class Events {
 			System.out.println("You check your backpack and find: " + items);
 			System.out.println("Enter the item you would like to use");
 			choice2 = u.next();
-			if (items.toString().toLowerCase().contains(choice2.toLowerCase())){
-				switch (choice2.toLowerCase()){
-				case "monado": 
-					System.out.println("A bit overkill, but you know... ya killed it, feeling a little proud of yourself for retrieving your shoe, you move on at an increased pace");
-					speed+=3;
-					position+=speed;
+			if (items.toString().toLowerCase().contains(choice2.toLowerCase())) {
+				switch (choice2.toLowerCase()) {
+				case "monado":
+					System.out
+							.println("A bit overkill, but you know... ya killed it, feeling a little proud of yourself for retrieving your shoe, you move on at an increased pace");
+					speed += 3;
+					position += speed;
 					items.remove(items.indexOf("Monado"));
 					break;
 				case "mysterious crystal":
-					System.out.println("Turns out its a fire crystal, you smile as the rabbit sizzles, too bad the fire consumed your shoe as well");
-					speed +=1;
+					System.out
+							.println("Turns out its a fire crystal, you smile as the rabbit sizzles, too bad the fire consumed your shoe as well");
+					speed += 1;
+					items.remove(items.indexOf("Mysterious Crystal"));
 					position += speed;
 					break;
 				default:
-					System.out.println("Really you used your " + choice2 + " to try to kill a rabbit?? Well, it did nothing");
-					speed -=1;
+					System.out
+							.println("Really you used your "
+									+ choice2
+									+ " to try to kill a rabbit?? Well, it did nothing");
+					speed -= 1;
 					position += speed;
 				}
-			}else{
-				System.out.println("You do not even own this item, you can no longer use items on this event... and it keeps your shoe");
+			} else {
+				System.out
+						.println("You do not even own this item, you can no longer use items on this event... and it keeps your shoe");
 				speed -= 1;
 				position += speed;
 			}
@@ -303,7 +321,138 @@ public class Events {
 		}
 		return position;
 	}
-	
+
+	public int ev9(int p) { // Rock (Korean Jesus) @Troy&Nick
+		position = p;
+		System.out
+				.println("You stub your toe on a rock, you think to yourself \"Hmm this could be useful\" ");
+		System.out.println("(1) Pick it up ");
+		System.out.println("(2) Leave it be");
+		choice = u.nextInt();
+		switch (choice) {
+		case 1:
+			System.out
+					.println("You put it in your backpack, its quite heavy and will probably slow you down");
+			items.add("Rock");
+			speed -= 1;
+			position += speed;
+			break;
+		case 2:
+			System.out.println("Too bad... you might need that rock later");
+			position += speed;
+			break;
+		default:
+			System.out
+					.println("No pity is shown to those who cannot follow the rules of the game. Die, you fiend.");
+			position = 0;
+			break;
+		}
+		return position;
+	}
+
+	public int ev10(int p) { // Lake @Troy&Nick
+		position = p;
+		System.out
+				.println("You encounter a large lake with no visible way across");
+		System.out.println("(1) Try to swim across ");
+		System.out.println("(2) Wander around");
+		choice = u.nextInt();
+		switch (choice) {
+		case 1:
+			System.out.println("You decide to try to swim across");
+			if (items.contains("Rock")) {
+				System.out
+						.println("Well thanks to that handy dandy rock you picked up you were weighed down and drowned");
+				position = -1;
+			} else {
+				System.out.println("You made it across safely");
+				position += speed + 4;
+			}
+			break;
+		case 2:
+			System.out
+					.println("You wandered until you found a ferry and crossed safely");
+			position += speed;
+			break;
+		default:
+			System.out
+					.println("No pity is shown to those who cannot follow the rules of the game. Die, you fiend.");
+			position = 0;
+			break;
+		}
+		return position;
+	}
+
+	public int ev11(int p) { // Death Note Reference (Korean Jesus) @Troy&Nick
+		position = p;
+		System.out.println("You sneak up on a stranger ");
+		System.out.println("(1) Say Hello");
+		System.out.println("(2) Access inventory");
+		choice = u.nextInt();
+		switch (choice) {
+		case 1:
+			System.out.println("You say hello, he doesnt seem to hear you so you move on");
+			position += speed;
+			break;
+		case 2:
+			item = backpack();
+			switch (item.toLowerCase()) {
+			case "monado":
+				System.out
+						.println("A bit overkill, but you know... ya killed him, you only have room in your backpack to take one item");
+				System.out.println("(1) Black leather-bound notebook");
+				System.out.println("(2) Bazooka");
+				System.out.println("(3) Railgun");
+				choice = u.nextInt();
+				switch(choice){
+				case 1:
+					System.out.println("You become the God of the new world");
+					position = 100;
+					break;
+				case 2:
+					System.out.println("You carefully put it into your backpack");
+					items.add("Bazooka");
+					break;
+				case 3:
+					System.out.println("You carefully put it into your backpack");
+					items.add("Railgun");
+					break;
+				default:
+					System.out
+							.println("No pity is shown to those who cannot follow the rules of the game. Die, you fiend.");
+					position = -1;
+					break;
+				}
+				position += speed;
+				items.remove(items.indexOf("Monado"));
+				break;
+			case "mysterious crystal":
+				System.out
+						.println("Turns out its a fire crystal, you smile as the stranger sizzles, too bad the fire consumed items as well");
+				speed += 1;
+				position += speed;
+				break;
+			case "rock":
+				System.out
+						.println("You hit him over the head with a rock, he is out cold... you only have room in your backpack to take one item");
+				speed += 1;
+				position += speed;
+				break;
+			default:
+				System.out.println("That item accomplished nothing, you move on");
+				position += speed;
+			}
+			position += speed;
+			break;
+		default:
+			System.out
+					.println("No pity is shown to those who cannot follow the rules of the game. Die, you fiend.");
+			position = -1;
+			break;
+		}
+		return position;
+	}
+
 	public int evcreation(int p) { // Strange Temple (Korean Jesus) @Troy
 		position = p;
 		System.out.println("");
@@ -326,5 +475,18 @@ public class Events {
 			break;
 		}
 		return position;
+	}
+	public String backpack(){
+		String choice2;
+		System.out.println("You check your backpack and find: " + items);
+		System.out.println("Enter the item you would like to use");
+		choice2 = u.next();
+		if (items.toString().toLowerCase().contains(choice2.toLowerCase())) {
+			return choice2;
+		}else{
+			System.out.println("The item you entered is not in your backpack, you can no longer use items for this event");
+			return null;
+		}
+			
 	}
 }
