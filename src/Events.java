@@ -127,7 +127,6 @@ public class Events {
 		position = p;
 		System.out
 				.println("You encountered a squirrel, it tricked you and stole your shoe, your speed has been diminished");
-		choice = u.nextInt();
 		speed -= 1;
 		position += speed;
 		return position;
@@ -440,6 +439,33 @@ public class Events {
 			case "rock":
 				System.out
 						.println("You hit him over the head with a rock, he is out cold... you only have room in your backpack to take one item");
+				System.out
+						.println("A bit overkill, but you know... ya killed him, you only have room in your backpack to take one item");
+				System.out.println("(1) Black leather-bound notebook");
+				System.out.println("(2) Bazooka");
+				System.out.println("(3) Railgun");
+				choice = u.nextInt();
+				switch (choice) {
+				case 1:
+					System.out.println("You become the God of the new world");
+					position = 100;
+					break;
+				case 2:
+					System.out
+							.println("You carefully put it into your backpack");
+					items.add("Bazooka");
+					break;
+				case 3:
+					System.out
+							.println("You carefully put it into your backpack");
+					items.add("Railgun");
+					break;
+				default:
+					System.out
+							.println("No pity is shown to those who cannot follow the rules of the game. Die, you fiend.");
+					position = -1;
+					break;
+				}
 				speed += 1;
 				position += speed;
 				break;
