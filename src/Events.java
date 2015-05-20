@@ -47,6 +47,7 @@ public class Events {
 		choice = u.nextInt();
 		switch (choice) {
 		case 1:
+			speed+=2;
 			System.out
 					.println("Korean Jesus welcomes you and grants you his blessing, your speed has been increased by 2 and is now: "
 							+ speed);
@@ -170,8 +171,8 @@ public class Events {
 		// @Troy
 		position = p;
 		System.out
-				.println("A strange man wearing a robe and flipflops approaches you, for some reason he looks strangely familiar");
-		System.out.println("\"Would you like to be a god, young man?\"");
+				.println("A strange man with long hair wearing a robe and flipflops approaches you, for some reason he looks strangely familiar");
+		System.out.println("\"Would you like to be a god young man?\"");
 		System.out.println("(1)\"Yes please\" ");
 		System.out
 				.println("(2) \"No thank you sir, I am perfectly happy being a human\" ");
@@ -262,7 +263,7 @@ public class Events {
 			switch (choice3) {
 			case 1:
 				System.out
-						.println("You are literally too stupid to live, god has smitten you... You are now dead");
+						.println("You are literally too stupid to live, god has smitten you... You are now dead, and extra crispy");
 				position = -1;
 				break;
 			case 2:
@@ -582,6 +583,117 @@ public class Events {
 		return position;
 	}
 
+	public int ev15(int p) { //Hermes Boots @Troy
+		position = p;
+		System.out.println("You found a new pair of shoes, they have a nice set of wings painted on the side");
+		System.out.println("(1) Put them on");
+		System.out.println("(2) Leave them there and move on");
+		choice = u.nextInt();
+		switch (choice) {
+		case 1:
+			System.out.println("You should probably have thought this through first but luckily for you they are Hermes\'s boots, Gotta go fast");
+			speed+=7;
+			position += speed;
+			break;
+		case 2:
+			System.out.println("THEY HAD WINGS!! WINGS!!!!... and YOU!... YOU turned that shit down!!");
+			position += speed;
+			break;
+		default:
+			System.out
+					.println("No pity is shown to those who cannot follow the rules of the game. Die, you fiend.");
+			position = 0;
+			break;
+		}
+		return position;
+	}
+	
+	public int ev16(int p) { //Walker @Troy
+		String choice2;
+		position = p;
+		System.out.println("As you stumble through the woods you come across a Walker");
+		System.out.println("(1) Ignore it and jog past it");
+		System.out.println("(2) Try to say hello");
+		System.out.println("(3) Access Inventory");
+		choice = u.nextInt();
+		switch (choice) {
+		case 1:
+			System.out.println("You move on without incident");
+			position += speed;
+			break;
+		case 2:
+			System.out.println("The noice catches the zoimbie\'s attention");
+			position += speed;
+			break;
+		case 3:
+			choice2 = backpack();
+				switch (choice2.toLowerCase()) {
+				case "monado":
+					System.out
+							.println("A bit overkill, but you know... ya killed it, feeling a little proud of yourself for preventing an apocolypse, you move on at an increased pace");
+					speed += 3;
+					position += speed;
+					items.remove(items.indexOf("Monado"));
+					break;
+				case "mysterious crystal":
+					System.out
+							.println("Turns out its a fire crystal, you smile as the zombie sizzles... You probably prevented an apocolypse of some sort, nice job!");
+					speed += 3;
+					items.remove(items.indexOf("Mysterious Crystal"));
+					position += speed;
+					break;
+				case "rock":
+					System.out
+							.println("You bash the zombies head in with a sly grin on your face...You probably prevented an apocolypse of some sort, nice job! ");
+					speed += 3;
+					items.remove(items.indexOf("Rock"));
+					position += speed;
+					break;
+				default:
+					System.out
+							.println("Really you used your "
+									+ choice2
+									+ " to try to kill a rabbit?? Well, it did nothing");
+					speed -= 1;
+					position += speed;
+				}
+			break;
+		default:
+			System.out
+					.println("No pity is shown to those who cannot follow the rules of the game. Die, you fiend.");
+			position = 0;
+			break;
+		}
+		return position;
+	}
+	
+	public int ev17(int p) { // Hutch Waterfall @Troy
+		position = p;
+		System.out.println("\"Voices bothering you man? Ive been there\"");
+		System.out.println("(1) \"Yes! are my fillings picking up the View?\"");
+		System.out.println("(2) \"No you are crazy\"");
+		choice = u.nextInt();
+		switch (choice) {
+		case 1:
+			System.out.println("\"You need one of these doo-dangs\"");
+			System.out.println("He hands you a foil hat");
+			System.out.println("He hands you a foil hat\"Thanks again!\" you say as you walk away wearing your new hat");
+			speed += 2;
+			position += speed;
+			break;
+		case 2:
+			System.out.println("He did seem a bit odd, so you ignore him and move on");
+			position += speed;
+			break;
+		default:
+			System.out
+					.println("No pity is shown to those who cannot follow the rules of the game. Die, you fiend.");
+			position = 0;
+			break;
+		}
+		return position;
+	}
+	
 	public int evcreation(int p) { // Strange Temple (Korean Jesus) @Troy
 		position = p;
 		System.out.println("");
