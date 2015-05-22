@@ -21,11 +21,11 @@ public class GameMain {
 		position = 0;
 		Events e = new Events();
 		Random random = new Random();
-		while (position < 100 && position >= 0) {
+		while (position < 100 && position !=-1) {
 			System.out.println("Your position is " + position);
 			event = random.nextInt(14) + 1;
 			while (events.contains(event)) {
-				event = random.nextInt(14) + 1;
+				event = random.nextInt(17) + 1;
 			}
 			events.add(event);
 			/*
@@ -77,6 +77,15 @@ public class GameMain {
 			case 14:
 				position = e.ev14(position);
 				break;
+			case 15:
+				position = e.ev15(position);
+				break;
+			case 16:
+				position = e.ev16(position);
+				break;
+			case 17:
+				position = e.ev17(position);
+				break;
 			}
 			choice = 3;
 			if (position != -1) {
@@ -102,11 +111,17 @@ public class GameMain {
 			}
 
 			int x;
-			for (x = 0; x < 20; x++) {
+			if (position != -1){
+				for (x = 0; x < 20; x++) {
 				System.out.println("");
+				}
 			}
 		}
-
+		if (position>100){
+			System.out.println("Congratulations! You have reached your destination");
+		}else{
+			System.out.println("");
+		}
 	}
 
 }

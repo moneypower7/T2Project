@@ -8,7 +8,10 @@ import java.net.URISyntaxException;
 
 /* important shit to do:
  - Include checker so each event only happens once
- - fully implement items
+ - Fully implement items
+ - Add more items to use and more events in which to use them
+ - Test for bugs/fix pre-existing bugs
+ - Possibly add a pearly gates event once you die... Maybe have a quiz question to determine if they get a second chance or not?
  */
 /* Ideas
  * Option to use the force
@@ -100,7 +103,7 @@ public class Events {
 	public int ev3(int p) { // White Rabbit @Troy&Nick
 		position = p;
 		System.out
-				.println("There is white rabbit in the road, it looks rather fluffy and cute");
+				.println("There is a white rabbit in the road, it looks rather fluffy and cute");
 		System.out.println("(1) Reach out and pet it ");
 		System.out.println("(2) Ignore it and move on ");
 		choice = u.nextInt();
@@ -440,8 +443,6 @@ public class Events {
 			case "rock":
 				System.out
 						.println("You hit him over the head with a rock, he is out cold... you only have room in your backpack to take one item");
-				System.out
-						.println("A bit overkill, but you know... ya killed him, you only have room in your backpack to take one item");
 				System.out.println("(1) Black leather-bound notebook");
 				System.out.println("(2) Bazooka");
 				System.out.println("(3) Railgun");
@@ -627,6 +628,7 @@ public class Events {
 			break;
 		case 3:
 			choice2 = backpack();
+			choice2.toLowerCase();
 				switch (choice2.toLowerCase()) {
 				case "monado":
 					System.out
@@ -677,7 +679,8 @@ public class Events {
 		case 1:
 			System.out.println("\"You need one of these doo-dangs\"");
 			System.out.println("He hands you a foil hat");
-			System.out.println("He hands you a foil hat\"Thanks again!\" you say as you walk away wearing your new hat");
+			System.out.println("");
+			System.out.println("\"Thanks again!\" you say as you walk away wearing your new hat");
 			speed += 2;
 			position += speed;
 			break;
