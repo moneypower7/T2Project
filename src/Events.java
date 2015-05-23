@@ -25,7 +25,7 @@ public class Events {
 	ArrayList<String> items;
 
 	public Events() {
-		speed = 2;
+		speed = 4;
 		position = 0;
 		choice = 0;
 		items = new ArrayList<String>();
@@ -498,7 +498,7 @@ public class Events {
 		case 1:
 			System.out
 					.println("You're not quite sure what happened but you feel tired and a bit... sweaty? You definitely feel like slowing down for a bit.");
-			speed -= 2;
+			speed -= 1;
 			position += speed;
 			break;
 		case 2:
