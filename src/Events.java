@@ -50,7 +50,7 @@ public class Events {
 		choice = u.nextInt();
 		switch (choice) {
 		case 1:
-			speed+=2;
+			speed += 2;
 			System.out
 					.println("Korean Jesus welcomes you and grants you his blessing, your speed has been increased by 2 and is now: "
 							+ speed);
@@ -584,20 +584,23 @@ public class Events {
 		return position;
 	}
 
-	public int ev15(int p) { //Hermes Boots @Troy
+	public int ev15(int p) { // Hermes Boots @Troy
 		position = p;
-		System.out.println("You found a new pair of shoes, they have a nice set of wings painted on the side");
+		System.out
+				.println("You found a new pair of shoes, they have a nice set of wings painted on the side");
 		System.out.println("(1) Put them on");
 		System.out.println("(2) Leave them there and move on");
 		choice = u.nextInt();
 		switch (choice) {
 		case 1:
-			System.out.println("You should probably have thought this through first but luckily for you they are Hermes\'s boots, Gotta go fast");
-			speed+=7;
+			System.out
+					.println("You should probably have thought this through first but luckily for you they are Hermes\'s boots, Gotta go fast");
+			speed += 7;
 			position += speed;
 			break;
 		case 2:
-			System.out.println("THEY HAD WINGS!! WINGS!!!!... and YOU!... YOU turned that shit down!!");
+			System.out
+					.println("THEY HAD WINGS!! WINGS!!!!... and YOU!... YOU turned that shit down!!");
 			position += speed;
 			break;
 		default:
@@ -608,7 +611,7 @@ public class Events {
 		}
 		return position;
 	}
-	
+
 	public int ev16(int p) { //Walker @Troy
 		String choice2;
 		position = p;
@@ -623,7 +626,7 @@ public class Events {
 			position += speed;
 			break;
 		case 2:
-			System.out.println("The noice catches the zoimbie\'s attention");
+			System.out.println("The noise catches the zoimbie's attention");
 			position += speed;
 			break;
 		case 3:
@@ -632,30 +635,43 @@ public class Events {
 				switch (choice2.toLowerCase()) {
 				case "monado":
 					System.out
-							.println("A bit overkill, but you know... ya killed it, feeling a little proud of yourself for preventing an apocolypse, you move on at an increased pace");
+							.println("A bit overkill, but you know... ya killed it, feeling a little proud of yourself for preventing an apocalypse, you move on at an increased pace");
 					speed += 3;
 					position += speed;
 					items.remove(items.indexOf("Monado"));
 					break;
 				case "mysterious crystal":
 					System.out
-							.println("Turns out its a fire crystal, you smile as the zombie sizzles... You probably prevented an apocolypse of some sort, nice job!");
+							.println("Turns out its a fire crystal, you smile as the zombie sizzles... You probably prevented an apocalypse of some sort, nice job!");
 					speed += 3;
 					items.remove(items.indexOf("Mysterious Crystal"));
 					position += speed;
 					break;
 				case "rock":
 					System.out
-							.println("You bash the zombies head in with a sly grin on your face...You probably prevented an apocolypse of some sort, nice job! ");
+							.println("You bash the zombie's head in with a sly grin on your face...You probably prevented an apocalypse of some sort. nice job!");
 					speed += 3;
 					items.remove(items.indexOf("Rock"));
 					position += speed;
 					break;
+				case "railgun":
+					System.out.println("You blow the zombie's head in with a sly grin on your face... You probably prevented an apocalypse of some sort. Nice job!")
+				speed += 3;
+					items.remove(items.indexOf("Railgun"));
+					position += speed;
+					break;
+				case "bazooka":
+					System.out.println("You blow the zombie's head in with a sly grin on your face... You probably prevented an apocalypse of some sort. Nice job!")
+				speed += 3;
+					items.remove(items.indexOf("Bazooka"));
+					position += speed;
+					break;
+				
 				default:
 					System.out
-							.println("Really you used your "
+							.println("Really, you used your "
 									+ choice2
-									+ " to try to kill a rabbit?? Well, it did nothing");
+									+ " to try to kill a zombie?? Well, it did nothing");
 					speed -= 1;
 					position += speed;
 				}
@@ -668,7 +684,7 @@ public class Events {
 		}
 		return position;
 	}
-	
+
 	public int ev17(int p) { // Hutch Waterfall @Troy
 		position = p;
 		System.out.println("\"Voices bothering you man? Ive been there\"");
@@ -680,12 +696,14 @@ public class Events {
 			System.out.println("\"You need one of these doo-dangs\"");
 			System.out.println("He hands you a foil hat");
 			System.out.println("");
-			System.out.println("\"Thanks again!\" you say as you walk away wearing your new hat");
+			System.out
+					.println("\"Thanks again!\" you say as you walk away wearing your new hat");
 			speed += 2;
 			position += speed;
 			break;
 		case 2:
-			System.out.println("He did seem a bit odd, so you ignore him and move on");
+			System.out
+					.println("He did seem a bit odd, so you ignore him and move on");
 			position += speed;
 			break;
 		default:
@@ -696,7 +714,7 @@ public class Events {
 		}
 		return position;
 	}
-	
+
 	public int evcreation(int p) { // Strange Temple (Korean Jesus) @Troy
 		position = p;
 		System.out.println("");
