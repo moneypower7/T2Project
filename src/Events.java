@@ -671,7 +671,6 @@ public class Events {
 	
 	public int ev17(int p) { // Hutch Waterfall @Troy
 		position = p;
-		System.out.println("You meet a strange man wearing a foil hat");
 		System.out.println("\"Voices bothering you man? Ive been there\"");
 		System.out.println("(1) \"Yes! are my fillings picking up the View?\"");
 		System.out.println("(2) \"No you are crazy\"");
