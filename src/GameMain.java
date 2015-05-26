@@ -21,7 +21,7 @@ public class GameMain {
 		position = 0;
 		Events e = new Events();
 		Random random = new Random();
-		while (position < 100 && position !=-1) {
+		while (position < 50 && position !=-1) {
 			System.out.println("Your position is " + position);
 			event = random.nextInt(14) + 1;
 			while (events.contains(event)) {
@@ -117,7 +117,7 @@ public class GameMain {
 				}
 			}
 		}
-		if (position>100){
+		if (position>50){
 			System.out.println("Congratulations! You have reached your destination");
 		}else{
 			System.out.println("");
