@@ -32,6 +32,7 @@ public class Events {
 				.println("Hmmm, that's weird... you encountered nothing on your travel, you walked forward "
 						+ speed + " miles feeling a little bored");
 		position += speed; // changes speed accordingly
+		u.close();
 		return position;
 	}
 
@@ -64,6 +65,7 @@ public class Events {
 			position = 0; // changes position accordingly
 			break;
 		}
+		u.close();
 		return position;
 	}
 
@@ -97,6 +99,7 @@ public class Events {
 			position = 0; // changes position accordingly
 			break;
 		}
+		u.close();
 		return position;
 	}
 
@@ -126,6 +129,7 @@ public class Events {
 			position = 0; // changes position accordingly
 			break;
 		}
+		u.close();
 		return position;
 	}
 
@@ -137,6 +141,7 @@ public class Events {
 				.println("You encountered a squirrel, it tricked you and stole your shoe, your speed has been diminished");
 		speed -= 1; // changes speed accordingly
 		position += speed; // changes position accordingly
+		u.close();
 		return position;
 	}
 
@@ -169,6 +174,7 @@ public class Events {
 			position = 0; // changes position accordingly
 			break;
 		}
+		u.close();
 		return position;
 	}
 
@@ -211,6 +217,7 @@ public class Events {
 			position = -1; // changes position accordingly
 			break;
 		}
+		u.close();
 		return position;
 	}
 
@@ -253,6 +260,7 @@ public class Events {
 			position = -1; // changes position accordingly
 			break;
 		}
+		u.close();
 		return position;
 	}
 
@@ -360,6 +368,7 @@ public class Events {
 			position = -1; // changes position accordingly
 			break;
 		}
+		u.close();
 		return position;
 	}
 
@@ -392,6 +401,7 @@ public class Events {
 			position = 0; // changes position accordingly
 			break;
 		}
+		u.close();
 		return position;
 	}
 
@@ -426,6 +436,7 @@ public class Events {
 			position = 0; // changes position accordingly
 			break;
 		}
+		u.close();
 		return position;
 	}
 
@@ -531,6 +542,7 @@ public class Events {
 			position = -1; // changes position accordingly
 			break;
 		}
+		u.close();
 		return position;
 	}
 
@@ -564,6 +576,7 @@ public class Events {
 			position = 0; // changes position accordingly
 			break;
 		}
+		u.close();
 		return position;
 	}
 
@@ -609,6 +622,7 @@ public class Events {
 			}
 			return position;
 		}
+		u.close();
 		return position;
 	}
 
@@ -639,6 +653,7 @@ public class Events {
 			position = 0; // changes position accordingly
 			break;
 		}
+		u.close();
 		return position;
 	}
 
@@ -669,6 +684,7 @@ public class Events {
 			position = 0; // changes position accordingly
 			break;
 		}
+		u.close();
 		return position;
 	}
 
@@ -744,6 +760,7 @@ public class Events {
 			position = 0; // changes position accordingly
 			break;
 		}
+		u.close();
 		return position;
 	}
 
@@ -776,6 +793,7 @@ public class Events {
 			position = 0; // changes position accordingly
 			break;
 		}
+		u.close();
 		return position;
 	}
 

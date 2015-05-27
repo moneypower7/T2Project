@@ -15,9 +15,9 @@ public class GameMain {
 														// similar to board game
 														// online
 
-		int position, event, choice,revive;
+		int position, event, choice, revive;
 		revive = 1;
-		while (revive!=2) {
+		while (revive != 2) {
 			Scanner u = new Scanner(System.in);
 			ArrayList<Integer> events = new ArrayList<Integer>(); // list of
 																	// possible
@@ -137,12 +137,13 @@ public class GameMain {
 			} else {
 				System.out
 						.println("You failed the test of life, nice work... you should probably study harder next time");
-				System.out.println("\"Would you like to try again young man?\"  Says Korean Jesus");
+				System.out
+						.println("\"Would you like to try again young man?\"  Says Korean Jesus");
 				System.out.println("(1) \"Yes! Please revive me Senpai\"");
 				System.out.println("(2) \"No thanks, I hated my life anyway\"");
-				
+
 			}
+			u.close();
 		}
 	}
-
 }
