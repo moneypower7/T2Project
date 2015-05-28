@@ -17,12 +17,13 @@ public class GameMain {
 
 		int position, event, choice, revive;
 		revive = 1;
-		while (revive != 2) {
+		position = 0;
+		while (revive != 2 && position<100) {
 			Scanner u = new Scanner(System.in);
 			ArrayList<Integer> events = new ArrayList<Integer>(); // list of
 																	// possible
 																	// events
-			position = 0; // sets initial position
+			 // sets initial position
 			Events e = new Events(); // creates an instance of the Events class
 			Random random = new Random(); // creates RNG
 			while (position < 100 && position != -1) { // has player do a new
@@ -100,6 +101,9 @@ public class GameMain {
 					break;
 				}
 				choice = 3;
+				if (position<-1){
+					position = 0;
+				}
 				if (position != -1) { // if you have not died
 					while (choice != 2) { // while you haven't chosen to move on
 						System.out.println("(1) Check Inventory");
@@ -135,15 +139,26 @@ public class GameMain {
 				System.out
 						.println("Congratulations! You have reached your destination");
 			} else {
+				System.out.println("");
 				System.out
 						.println("You failed the test of life, nice work... you should probably study harder next time");
 				System.out
 						.println("\"Would you like to try again young man?\"  Says Korean Jesus");
 				System.out.println("(1) \"Yes! Please revive me Senpai\"");
 				System.out.println("(2) \"No thanks, I hated my life anyway\"");
+				revive = u.nextInt();
+				if (revive == 1){
+					position = 0;
+				}else{
+					if (revive > 2 || revive < 1){
+						System.out.println("You did not follow the rules, you will have no Afterlife");
+						System.exit(0);
+					}else{
+						System.out.println("Enjoy your \"Limbo Party\"");
+					}
+				}
 
 			}
-			u.close();
 		}
 	}
 }

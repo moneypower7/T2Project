@@ -15,7 +15,7 @@ public class Events {
 
 	public Events() {
 		speed = 4; // default speed
-		position = 0; // starting location
+		position = -1; // starting location
 		choice = 0; // initialize choice
 		items = new ArrayList<String>(); // list of items in inventory
 		u = new Scanner(System.in);
@@ -32,7 +32,7 @@ public class Events {
 				.println("Hmmm, that's weird... you encountered nothing on your travel, you walked forward "
 						+ speed + " miles feeling a little bored");
 		position += speed; // changes speed accordingly
-		u.close();
+		
 		return position;
 	}
 
@@ -62,10 +62,10 @@ public class Events {
 		default:
 			System.out
 					.println("No pity is shown to those who cannot follow the rules of the game. Die, you fiend.");
-			position = 0; // changes position accordingly
+			position = -1; // changes position accordingly
 			break;
 		}
-		u.close();
+		
 		return position;
 	}
 
@@ -96,10 +96,10 @@ public class Events {
 		default:
 			System.out
 					.println("Really, dude? Just choose a valid action. Have fun in hell.");
-			position = 0; // changes position accordingly
+			position = -1; // changes position accordingly
 			break;
 		}
-		u.close();
+		
 		return position;
 	}
 
@@ -126,10 +126,10 @@ public class Events {
 		default:
 			System.out
 					.println("No pity is shown to those who cannot follow the rules of the game. Die, you fiend.");
-			position = 0; // changes position accordingly
+			position = -1; // changes position accordingly
 			break;
 		}
-		u.close();
+		
 		return position;
 	}
 
@@ -141,7 +141,7 @@ public class Events {
 				.println("You encountered a squirrel, it tricked you and stole your shoe, your speed has been diminished");
 		speed -= 1; // changes speed accordingly
 		position += speed; // changes position accordingly
-		u.close();
+		
 		return position;
 	}
 
@@ -171,10 +171,10 @@ public class Events {
 		default:
 			System.out
 					.println("No pity is shown to those who cannot follow the rules of the game. Die, you fiend.");
-			position = 0; // changes position accordingly
+			position = -1; // changes position accordingly
 			break;
 		}
-		u.close();
+		
 		return position;
 	}
 
@@ -217,7 +217,7 @@ public class Events {
 			position = -1; // changes position accordingly
 			break;
 		}
-		u.close();
+		
 		return position;
 	}
 
@@ -260,7 +260,7 @@ public class Events {
 			position = -1; // changes position accordingly
 			break;
 		}
-		u.close();
+		
 		return position;
 	}
 
@@ -294,10 +294,10 @@ public class Events {
 			case 2:
 				System.out
 						.println("Korean Jesus is proud of you, you move on, a bit slower than before");
-				speed -= 1; // changes speed accordingly
+				speed -= 1;
+				position += speed; // changes speed accordingly
 				break;
 			}
-			position += speed; // changes position accordingly
 			break;
 		case 2:
 			System.out
@@ -368,7 +368,7 @@ public class Events {
 			position = -1; // changes position accordingly
 			break;
 		}
-		u.close();
+		
 		return position;
 	}
 
@@ -398,10 +398,10 @@ public class Events {
 		default:
 			System.out
 					.println("No pity is shown to those who cannot follow the rules of the game. Die, you fiend.");
-			position = 0; // changes position accordingly
+			position = -1; // changes position accordingly
 			break;
 		}
-		u.close();
+		
 		return position;
 	}
 
@@ -433,10 +433,10 @@ public class Events {
 		default:
 			System.out
 					.println("No pity is shown to those who cannot follow the rules of the game. Die, you fiend.");
-			position = 0; // changes position accordingly
+			position = -1; // changes position accordingly
 			break;
 		}
-		u.close();
+		
 		return position;
 	}
 
@@ -542,7 +542,7 @@ public class Events {
 			position = -1; // changes position accordingly
 			break;
 		}
-		u.close();
+		
 		return position;
 	}
 
@@ -573,10 +573,10 @@ public class Events {
 		default:
 			System.out
 					.println("No pity is shown to those who cannot follow the rules of the game. Die, you fiend.");
-			position = 0; // changes position accordingly
+			position = -1; // changes position accordingly
 			break;
 		}
-		u.close();
+		
 		return position;
 	}
 
@@ -617,12 +617,11 @@ public class Events {
 			default:
 				System.out
 						.println("No pity is shown to those who cannot follow the rules of the game. Die, you fiend.");
-				position = 0; // changes position accordingly
+				position = -1; // changes position accordingly
 				break;
 			}
-			return position;
 		}
-		u.close();
+		
 		return position;
 	}
 
@@ -650,10 +649,10 @@ public class Events {
 		default:
 			System.out
 					.println("No pity is shown to those who cannot follow the rules of the game. Die, you fiend.");
-			position = 0; // changes position accordingly
+			position = -1; // changes position accordingly
 			break;
 		}
-		u.close();
+		
 		return position;
 	}
 
@@ -681,10 +680,10 @@ public class Events {
 		default:
 			System.out
 					.println("No pity is shown to those who cannot follow the rules of the game. Die, you fiend.");
-			position = 0; // changes position accordingly
+			position = -1; // changes position accordingly
 			break;
 		}
-		u.close();
+		
 		return position;
 	}
 
@@ -757,10 +756,10 @@ public class Events {
 		default:
 			System.out
 					.println("No pity is shown to those who cannot follow the rules of the game. Die, you fiend.");
-			position = 0; // changes position accordingly
+			position = -1; // changes position accordingly
 			break;
 		}
-		u.close();
+		
 		return position;
 	}
 
@@ -790,10 +789,9 @@ public class Events {
 		default:
 			System.out
 					.println("No pity is shown to those who cannot follow the rules of the game. Die, you fiend.");
-			position = 0; // changes position accordingly
+			position = -1; // changes position accordingly
 			break;
 		}
-		u.close();
 		return position;
 	}
 
